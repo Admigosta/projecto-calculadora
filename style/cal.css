@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+body {
+    background-image: linear-gradient(180deg, orange, orangered);
+}
+
+h1 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    background-color: orange;
+    padding: 8px;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cal-container {
+    background-image: linear-gradient(180deg, orange, orangered);
+    /*background-color: rgb(255, 136, 0);*/
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.cal-container button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: #fff;
+}
+
+.cal-container button:hover {
+    background-color: #fff;
+    color: orangered;
+}
+
+.cal-container .operator {
+    background: orange;
+}
+
+.cal-container .span-two {
+    grid-column: span 2;
+}
+
+.cal-container .output {
+    grid-column: 1 / -1;
+    background: orange;
+    border-radius: 6px;
+    border: 2px solid orangered;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.cal-container .output .previous-operand {
+    color: rgba(255, 255, 255, 0.452);
+    font-size: 1.5rem;
+}
+
+.cal-container .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
